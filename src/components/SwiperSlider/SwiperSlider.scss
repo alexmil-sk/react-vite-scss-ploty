@@ -1,0 +1,123 @@
+.swiper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  //height: calc(#{100vh} - #{98px});
+}
+
+.swiper-wrapper {
+  position: inherit;
+}
+
+.swiper-slide {
+  background: none;
+  position: inherit;
+  &>img {
+    position: absolute;
+    left: 250px;
+    width: 60%;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+  }
+
+}
+
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-top: 60px;
+  transition: all 600ms ease-in-out 0s;
+
+  &:nth-child(1) {
+    margin-top: 100px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  text-align: left;
+  font-size: 26px;
+  font-family: "Catamaran Extra Bold", sans-serif;
+  transition: font-size 400ms ease-in-out 0s;
+
+  .pagination-art {
+    display: block;
+    position: relative;
+    font-family: "Catamaran Semi Bold", sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+    transition: font-size 400ms ease-in-out 0s;
+    &::before {
+      content: '';
+      display: none;
+      width: 203px;
+      height: 1px;
+      background-color: #fff;
+      margin-bottom: 10px;
+      transition: all 400ms ease-in-out 0s;
+    }
+  }
+
+  .pagination-price {
+    display: block;
+    font-family: "Catamaran Semi Bold", sans-serif;
+    font-size: 13px;
+    color: #BCBCBC;
+    margin: 5px 0;
+    transition: font-size 400ms ease-in-out 0s;
+
+
+    span {
+      font-size: 17px;
+      transition: font-size 400ms ease-in-out 0s;
+
+    }
+  }
+
+  .pagination-image {
+    width: 50px;
+    border-radius: 1%;
+    transition: border-radius 400ms ease-in-out 0s;
+
+  }
+}
+
+.swiper-pagination-bullet-active {
+  font-size: 34px;
+  background: transparent;
+
+  .pagination-art {
+    font-size: 23px;
+    margin-top: 0;
+    &::before {
+      display: block;
+    }
+  }
+
+  .pagination-price {
+    font-size: 17px;
+
+    span {
+      font-size: 23px;
+    }
+  }
+  .pagination-image {
+    border-radius: 50%;
+  }
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  position: absolute;
+  top: 230px;
+  right: inherit;
+  left: 30px;
+  width: 203px;
+  flex-basis: 203px;
+
+}
+

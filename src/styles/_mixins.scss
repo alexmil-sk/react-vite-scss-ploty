@@ -1,0 +1,43 @@
+@mixin adaptive-font($deskFontSize, $mobileFontSize, $maxWidth, $minWidth) {
+	$addDeskFontSize: $deskFontSize - $mobileFontSize;
+	$addMobileFontSize: $deskFontSize * 0.7;
+
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobileFontSize + px} + #{$addDeskFontSize} * (100vw / #{$maxWidth}));
+	}
+
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobileFontSize + px} + #{$addMobileFontSize} * (100vw - #{$minWidth + px}) / #{$maxWidth});
+	}
+}
+
+@mixin adaptive-padding-left($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media (min-width: 767px) {
+		padding-left: calc(#{$mobileMarginSize + px} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+
+	@media (max-width: 767px) {
+		padding-left: calc(
+			#{$mobileMarginSize + px} + #{$addMobileMarginSize} * (100vh - #{$minWidth + px}) / #{$maxWidth}
+		);
+	}
+}
+
+@mixin adaptive-padding-right($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media (min-width: 767px) {
+		padding-right: calc(#{$mobileMarginSize + px} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+
+	@media (max-width: 767px) {
+		padding-right: calc(
+			#{$mobileMarginSize + px} + #{$addMobileMarginSize} * (100vh - #{$minWidth + px}) / #{$maxWidth}
+		);
+	}
+}
+
