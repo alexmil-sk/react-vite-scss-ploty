@@ -1,20 +1,12 @@
-// Receive your html contact form submissions directly in your email inbox
-//using our contact form api service without any server or backend code.Its free!
-//Contac forms: https://web3forms.com/
-
-//www.npmjs.com/package/react-notifications
-//framer-motion
-
 import { useNavigate } from "react-router-dom";
 import "./ContactsPage.scss";
 import operator from "../../assets/images/form_to_mail/operator.png";
-
+import { toast } from "react-toastify";
 
 function ContactsPage() {
-
 	const navigate = useNavigate();
 
-	const onSubmit = async (e) => {
+	const onSubmit = (e) => {
 		e.preventDefault();
 
 		const formData = new FormData(e.target);
@@ -23,22 +15,24 @@ function ContactsPage() {
 		let object = Object.fromEntries(formData);
 		const json = JSON.stringify(object);
 
-		const res = await fetch("https://api.web3forms.com/submit", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-			},
-			body: json,
-		}).then((res) => res.json());
-		
-		
-		if (res.success) {
-			navigate("/");
-			console.log("Success", res);
-			alert("Vaša žiadosť bola úspešne odoslaná");
-		}
+		toast.info("Vaša žiadosť sa odosiela");
 
+		setTimeout(async () => {
+			const res = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: json,
+			}).then((res) => res.json());
+
+			if (res.success) {
+				//console.log("Success", res);
+				navigate("/");
+				toast.success("Vaša žiadosť bola úspešne odoslaná");
+			}
+		}, 3000);
 	};
 
 	return (
@@ -52,10 +46,6 @@ function ContactsPage() {
 					<img src={operator} alt="operator" />
 				</div>
 				<form onSubmit={onSubmit}>
-					{/* <form onSubmit={onSubmit} action="https://api.web3forms.com/submit" method="POST"> */}
-					{/* Hidden input */}
-					{/* <input type="hidden" name="access_key" value="392f9114-30e5-405c-850a-44c65a67e073" /> */}
-					{/* Hidden input */}
 					<div className="name-email">
 						<div className="name">
 							<input type="text" name="name" id="name" placeholder=" " required />
@@ -67,14 +57,7 @@ function ContactsPage() {
 						</div>
 					</div>
 					<div className="phone">
-						<input
-							type="tel"
-							name="phone"
-							id="phone"
-							maxLength="20"
-							pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/gx"
-							placeholder=" "
-						/>
+						<input type="tel" name="phone" id="phone" maxLength="13" pattern="^[0-9\-\+]{10,13}$" placeholder=" " />
 						<label htmlFor="phone">Zadajte telefónne číslo *</label>
 					</div>
 					<div className="address">

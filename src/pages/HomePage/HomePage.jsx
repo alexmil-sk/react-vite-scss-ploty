@@ -1,12 +1,12 @@
-import './HomePage.scss';
-import {SwiperSlider} from '../../components/SwiperSlider/SwiperSlider.jsx';
+import "./HomePage.scss";
+import { SwiperSlider } from "../../components/SwiperSlider/SwiperSlider.jsx";
 
-function HomePage () {
+function HomePage() {
 	return (
 		<>
-			<SwiperSlider />
+				<SwiperSlider />
 		</>
 	);
 }
 
-export {HomePage};
+export { HomePage };

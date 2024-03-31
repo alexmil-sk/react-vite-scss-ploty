@@ -5,7 +5,8 @@ import ploty_1 from '../../assets/images/ploty/ploty-1.webp'
 import ploty_2 from '../../assets/images/ploty/ploty-2.jpeg';
 import ploty_3 from '../../assets/images/ploty/ploty-3.jpg';
 import {SwiperBody} from './SwiperBody/SwiperBody.jsx';
-import {SwiperFooter} from './SwiperFooter/SwiperFooter.jsx';
+import { SwiperFooter } from './SwiperFooter/SwiperFooter.jsx';
+
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 

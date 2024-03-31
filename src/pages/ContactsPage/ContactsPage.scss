@@ -67,17 +67,21 @@
 					top: 13px;
 					left: 0;
 					color: orange;
+					background-color: #fff;
 					cursor: text;
 				}
 				input:focus + label,
 				input:not(:placeholder-shown) + label {
 					opacity: 1;
-					transform: scale(0.9) translateY(-230%) translateX(-10px);
-					color: orange;
+					transform: scale(0.9) translateY(-150%) translateX(10px);
+					color: #fff;
+					padding: 3px 6px;
+					border-radius: 4px;
+					background-color: orange;
 				}
 				input:focus {
 					outline: 2px solid orange;
-					outline-color: orange;
+					//outline-color: orange;
 				}
 				label,
 				input {
@@ -105,8 +109,11 @@
 				textarea:focus + label,
 				textarea:not(:placeholder-shown) + label {
 					opacity: 1;
-					transform: scale(0.9) translateY(-230%) translateX(-10px);
-					color: orange;
+					transform: scale(0.9) translateY(-150%) translateX(10px);
+					color: #fff;
+					padding: 3px 6px;
+					border-radius: 4px;
+					background-color: orange;
 				}
 				textarea:focus {
 					outline: 2px solid orange;
