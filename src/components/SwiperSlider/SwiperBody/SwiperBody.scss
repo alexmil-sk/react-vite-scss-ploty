@@ -1,117 +1,151 @@
 .swiper-body {
-  margin-left: 50%;
+	margin-left: 60%;
+	display: flex;
+	height: 224px;
+	flex-direction: column;
+	justify-content: space-between;
 
-  display: flex;
-  height: 224px;
-  flex-direction: column;
-  justify-content: space-between;
 
-  &__title {
-    font-family: "Caudex Bold", serif;
-    font-size: 45px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+	&__title {
+		font-family: "Caudex Bold", serif;
+		font-size: 45px;
+		line-height: 1.2;
+		margin-bottom: 30px;
 
-    span {
-      position: relative;
+		span {
+			position: relative;
 
-      &::before, &::after {
-        content: '3D printed';
-        position: absolute;
-        width: 100%;
-      }
+			&::before,
+			&::after {
+				content: "3D printed";
+				position: absolute;
+				width: 100%;
+			}
 
-      &::before {
-        top: 5px;
-        left: -4px;
-        color: #FB258B;
-        z-index: -1;
-      }
+			&::before {
+				top: 5px;
+				left: -4px;
+				color: #fb258b;
+				z-index: -1;
+			}
 
-      &::after {
-        bottom: 2px;
-        left: 3px;
-        color: #5025FB;
-        z-index: -1;
-      }
-    }
-  }
+			&::after {
+				bottom: 2px;
+				left: 3px;
+				color: #5025fb;
+				z-index: -1;
+			}
+		}
+	}
 
-  &__desc {
-    font-size: 20px;
-    line-height: 1.4;
-    color: #BCBCBC;
-    margin-bottom: 25px;
-  }
+	&__desc {
+		font-size: 20px;
+		line-height: 1.4;
+		color: #bcbcbc;
+		margin-bottom: 25px;
+	}
 
-  &__buttons {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
+	&__buttons {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
 
-    .btn {
-      position: relative;
-    }
+		.btn {
+			position: relative;
+		}
 
-    .buy {
-      font-family: "Orbitron Bold", sans-serif;
-      font-size: 18px;
-      background-color: #fff;
-      color: #252525;
-      padding: 12px 22px;
-      margin-right: 30px;
-      transition: all 300ms ease-in-out 0s;
+		.buy {
+			font-family: "Orbitron Bold", sans-serif;
+			font-size: 18px;
+			background-color: #fff;
+			color: #252525;
+			padding: 12px 22px;
+			margin-right: 30px;
+			transition: all 300ms ease-in-out 0s;
 
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        transition: opacity 400ms ease-in-out 0s;
-      }
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 1;
+				transition: opacity 400ms ease-in-out 0s;
+			}
 
-      &::before {
-        left: -4px;
-        top: -4px;
-        background-color: #FB258B;
-        z-index: -1;
-      }
+			&::before {
+				left: -4px;
+				top: -4px;
+				background-color: #fb258b;
+				z-index: -1;
+			}
 
-      &::after {
-        right: -4px;
-        bottom: -6px;
-        background-color: #5025FB;
-        z-index: -1;
-      }
+			&::after {
+				right: -4px;
+				bottom: -6px;
+				background-color: #5025fb;
+				z-index: -1;
+			}
 
-      &:hover {
-        &::before, &::after {
-          opacity: 0;
-        }
-      }
-    }
+			&:hover {
+				&::before,
+				&::after {
+					opacity: 0;
+				}
+			}
+		}
 
-    .catalog {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 134px;
-      font-family: "Orbitron Medium", sans-serif;
-      font-size: 16px;
-      background-color: #BCBCBC;;
-      border: 1px solid #fff;
-      padding: 14px 21px;
-      transition: all 400ms ease-in-out 0s;
+		.catalog {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 134px;
+			font-family: "Orbitron Medium", sans-serif;
+			font-size: 16px;
+			// background-color: #bcbcbc;
+			background-color: orange;
+			border: 1px solid #fff;
+			padding: 14px 0px;
+			transition: all 400ms ease-in-out 0s;
 
-      .list {
-        transform: scale(1.5);
-      }
+			.list {
+				transform: scale(1.5);
+			}
 
-      &:hover {
-        box-shadow: inset 0 0 8px 1px #666666;
-        color: #666666;
-      }
-    }
-  }
+			// &:hover {
+			// 	box-shadow: inset 0 0 8px 1px #666666;
+			// 	color: #666666;
+			// }
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 1;
+				transition: opacity 400ms ease-in-out 0s;
+			}
+
+			&::before {
+				left: -4px;
+				top: -4px;
+				background-color: #fde94e;
+				z-index: -1;
+			}
+
+			&::after {
+				right: -4px;
+				bottom: -6px;
+				background-color: #5025fb;
+				z-index: -1;
+			}
+
+			&:hover {
+				&::before,
+				&::after {
+					opacity: 0;
+				}
+			}
+		}
+	}
 }

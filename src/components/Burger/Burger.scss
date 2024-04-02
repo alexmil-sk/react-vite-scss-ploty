@@ -1,0 +1,29 @@
+.Burger {
+	position: absolute;
+	height: 500px;
+	width: 250px;
+	top: 99px;
+	left: 61px;
+	background-color: #000;
+	display: flex;
+	flex-direction: column;
+
+	z-index: 100;
+	.menu {
+		display: flex;
+		flex-direction: column;
+		row-gap: 40px;
+		padding: 25px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		&__item {
+			&_link {
+
+			}
+		}
+
+		.active {
+			color: orange;
+		}
+	}
+}

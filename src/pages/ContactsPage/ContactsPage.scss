@@ -12,7 +12,6 @@
 	h2 {
 		font-family: "Catamaran Extra Bold", sans-serif;
 		@include adaptive-font(60, 25, 1200, 320);
-		margin-bottom: 2rem;
 		span {
 			color: orange;
 		}

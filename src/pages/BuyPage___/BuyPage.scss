@@ -1,0 +1,13 @@
+.BuyPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid orange;
+	background-color: var(--backgrount-color-contacts);
+	padding: 2rem 0;
+	height: 80%;
+	img {
+		//width: 50%;
+		height: 100%;
+	}
+}

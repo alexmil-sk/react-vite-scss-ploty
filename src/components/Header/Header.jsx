@@ -1,7 +1,8 @@
 import './Header.scss';
 import logo from '../../assets/images/logo/logo.jpg';
 import wallet from '../../assets/images/svg/wallet.svg';
-import {CustomLink} from '../UI/CustomLink/CustomLink.jsx';
+import { CustomLink } from '../UI/CustomLink/CustomLink.jsx';
+import { routes } from "../../router/index";
 
 function Header () {
 	return (
@@ -11,31 +12,13 @@ function Header () {
 			</a>
 			<nav>
 				<ul className="menu">
-					<li className="menu__item">
-						<CustomLink to="/" classList="menu__item_link">
-							Home
-						</CustomLink>
-					</li>
-					<li className="menu__item">
-						<CustomLink to="/gallery" classList="menu__item_link">
-							Galéria
-						</CustomLink>
-					</li>
-					<li className="menu__item">
-						<CustomLink to="/beton" classList="menu__item_link">
-							Betónové
-						</CustomLink>
-					</li>
-					<li className="menu__item">
-						<CustomLink to="/brick" classList="menu__item_link">
-							Murované
-						</CustomLink>
-					</li>
-					<li className="menu__item">
-						<CustomLink to="/contacts" classList="menu__item_link">
-							Kontaktujte Nás
-						</CustomLink>
-					</li>
+					{routes.map((route) => (
+						<li className="menu__item" key={route.title}>
+							<CustomLink to={route.path} classList="menu__item_link">
+								{route.title}
+							</CustomLink>
+						</li>
+					))}
 					<li className="menu__item">
 						<CustomLink to="/buy" classList="menu__item_link">
 							<img src={wallet} alt="wallet" />

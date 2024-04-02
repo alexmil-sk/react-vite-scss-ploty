@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import "./ContactsPage.scss";
 import operator from "../../assets/images/form_to_mail/operator.png";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { motionContactsVariant } from "../../framer-motion/motionVariants";
 
 function ContactsPage() {
 	const navigate = useNavigate();
@@ -36,11 +38,16 @@ function ContactsPage() {
 	};
 
 	return (
-		<div className="Contacts">
+		<motion.div
+			className="Contacts"
+			initial={"hidden"}
+			animate={"visible"}
+			variants={motionContactsVariant}
+		>
 			<h2>
 				<span>Kontaktujte</span>&nbsp;Nás
 			</h2>
-			<p>Kontaktujte nás prostredníctvom tohto formulára alebo na telefónnom čísle 0 000 000 000.</p>
+			<p>Kontaktujte nás prostredníctvom tohto formulára alebo na telefónnom čísle +421 910 513 298.</p>
 			<div className="content__row">
 				<div className="content__image">
 					<img src={operator} alt="operator" />
@@ -78,7 +85,7 @@ function ContactsPage() {
 					<input type="submit" value="Poslať" className="btn" name="send" />
 				</form>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

@@ -1,10 +1,12 @@
-import './SwiperBody.scss';
-import {CiBoxList as List} from 'react-icons/ci';
-import {Link} from 'react-router-dom';
+import "./SwiperBody.scss";
+// import { CiBoxList as List } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { motionHomeSliderBodyVariant } from "../../../framer-motion/motionVariants";
 
-function SwiperBody () {
+function SwiperBody() {
 	return (
-		<div className="swiper-body">
+		<motion.div className="swiper-body" initial={"hidden"} animate={"visible"} variants={motionHomeSliderBodyVariant}>
 			<h2 className="swiper-body__title">
 				Win <span>3D printed</span>
 				<br />
@@ -16,16 +18,16 @@ function SwiperBody () {
 				other rewards on exclusive pieces.
 			</p>
 			<div className="swiper-body__buttons">
-				<Link to="/contacts" className="btn buy">
+				<Link to="/buy" className="btn buy">
 					Buy Now
 				</Link>
-				<Link to="/gallery" className="btn catalog">
-					<List className="list" />
-					<span>Galéria</span>
+				<Link to="/contacts" className="btn catalog">
+					{/* <List className="list" /> */}
+					<span>Poslat List</span>
 				</Link>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 
-export {SwiperBody};
+export { SwiperBody };
