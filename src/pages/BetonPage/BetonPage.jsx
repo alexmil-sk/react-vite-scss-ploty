@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import "./BetonPage.scss";
+import { Card } from "../../components/Card/Card";
 import { motion } from "framer-motion";
 import { motionBetonVariant } from "../../framer-motion/motionVariants";
 import lamany_kamen from "../../assets/images/ploty/dosky/lamany-kamen.jpg";
@@ -54,23 +55,8 @@ function BetonPage() {
 			<div className="beton__row">
 				<div className="beton__elements">
 					<div className="beton__elements_row">
-						{plotItems.map((i) => (
-							<div className="item__container" key={i.title}>
-								<div className="item">
-									<div className="item__img">
-										<img src={i.image} alt={i.image} />
-									</div>
-									<div className="item__content">
-										<h2>{i.title.toUpperCase()}</h2>
-										<p>{i.desc}</p>
-									</div>
-									<div className="item__btn">
-										<Link to="/contacts">
-											<button>Objednať</button>
-										</Link>
-									</div>
-								</div>
-							</div>
+						{plotItems.map((item) => (
+							<Card key={item.title} item={ item} />
 						))}
 					</div>
 				</div>

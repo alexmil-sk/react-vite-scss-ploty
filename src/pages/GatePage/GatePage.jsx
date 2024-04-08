@@ -1,5 +1,9 @@
+import { UnderConstruction } from "../../pages/UnderConstruction/UnderConstruction";
+
 function GatePage() {
-	return <div>Posuvné brány</div>;
+	return <div>
+		<UnderConstruction />
+	</div>;
 }
 
 export { GatePage };

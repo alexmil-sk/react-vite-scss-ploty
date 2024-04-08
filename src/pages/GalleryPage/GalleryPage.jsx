@@ -1,10 +1,10 @@
 import "./GalleryPage.scss";
+import { UnderConstruction } from "../../pages/UnderConstruction/UnderConstruction";
 
 function GalleryPage() {
 	return (
 		<div>
-			<h1>GalleryPage</h1>
-			
+			<UnderConstruction />
 		</div>
 	);
 }

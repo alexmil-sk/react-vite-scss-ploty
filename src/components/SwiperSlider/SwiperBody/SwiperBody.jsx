@@ -8,14 +8,12 @@ function SwiperBody() {
 	return (
 		<motion.div className="swiper-body" initial={"hidden"} animate={"visible"} variants={motionHomeSliderBodyVariant}>
 			<h2 className="swiper-body__title">
-				Win <span>3D printed</span>
-				<br />
-				miniature model
+				<span>Betónové ploty</span>
 			</h2>
 			<p className="swiper-body__desc">
-				Bid now to avail these models and many
+				Teraz vám ponúkame použitie týchto a
 				<br />
-				other rewards on exclusive pieces.
+				mnohých ďalších modelov.
 			</p>
 			<div className="swiper-body__buttons">
 				<Link to="/buy" className="btn buy">

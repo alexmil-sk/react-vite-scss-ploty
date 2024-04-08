@@ -1,34 +1,34 @@
-import './Sidebar.scss';
-import burger from "../../assets/images/svg/burger.svg";
-import facebook from "../../assets/images/svg/facebook.svg";
+import { Link } from 'react-router-dom';
+import styles from "./Sidebar.module.scss";
 import instagram from "../../assets/images/svg/instagram.svg";
 import twitter from "../../assets/images/svg/twitter.svg";
+import { Squash as Hamburger } from "hamburger-react";
+import { BiMessageAdd } from "react-icons/bi";
 
 const social = [
-	{title: 'facebook', src: facebook},
-	{title: 'instagram', src: instagram},
-	{title: 'twitter', src: twitter},
+	{ title: "message", src: BiMessageAdd, path: "/contacts" },
+	{ title: "instagram", src: instagram, path: "" },
+	{ title: "twitter", src: twitter, path: "" },
 ];
 
-function Sidebar () {
+function Sidebar({ isOpenBurger, setIsOpenBurger, isDisabledBtnBurger }) {
 	return (
-		<div className="Sidebar">
-			<button type="button" className="sidebar__button">
-				<img src={burger} alt="burger"/>
+		<div className={styles.Sidebar}>
+			<button type="button" className={styles.sidebar__button} disabled={isDisabledBtnBurger}>
+				<Hamburger label="Show menu" size={35} style={{ width: "100%" }} toggled={isOpenBurger} toggle={setIsOpenBurger} />
 			</button>
-			<ul className="list">
-				{
-					social.map((i, idx) => (
-						<li className="list__item" key={idx}>
-							<a href="#" className="list__item_link" target="_blank">
-								<img src={i.src} alt={i.title}/>
-							</a>
-						</li>
-					))
-				}
+
+			<ul className={styles.list}>
+				{social.map((i, idx) => (
+					<li className={styles.list__item} key={idx}>
+						<Link to={i.path} className={styles.list__item_link} target="_blank">
+							<img src={i.src} alt={i.title} />
+						</Link>
+					</li>
+				))}
 			</ul>
 		</div>
 	);
 }
 
-export {Sidebar};
+export { Sidebar };

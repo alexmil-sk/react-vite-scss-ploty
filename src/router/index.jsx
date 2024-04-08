@@ -23,19 +23,17 @@ const routes = [
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<Layout />}>
-					<Route index element={<HomePage />} />
-					<Route path="/gallery" element={<GalleryPage />} />
-					<Route path="/beton" element={<BetonPage />} />
-					<Route path="/brick" element={<BrickPage />} />
-					<Route path="/gate" element={<GatePage />} />
-					<Route path="/mine" element={<MinePage />} />
-					<Route path="/contacts" element={<ContactsPage />} />
-					<Route path="/buy" element={<BuyPage />} />
-					<Route path="*" element={<NotFoundPage />} />
-				</Route>,
+			<Route index element={<HomePage />} />
+			<Route path="/gallery" element={<GalleryPage />} />
+			<Route path="/beton" element={<BetonPage />} />
+			<Route path="/brick" element={<BrickPage />} />
+			<Route path="/gate" element={<GatePage />} />
+			<Route path="/mine" element={<MinePage />} />
+			<Route path="/contacts" element={<ContactsPage />} />
+			<Route path="/buy" element={<BuyPage />} />
+			<Route path="*" element={<NotFoundPage />} />
+		</Route>,
 	),
 );
-
-
 
 export { router, routes };

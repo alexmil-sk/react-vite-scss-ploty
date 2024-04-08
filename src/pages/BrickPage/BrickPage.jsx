@@ -1,5 +1,9 @@
+import { UnderConstruction } from "../../pages/UnderConstruction/UnderConstruction";
+
 function BrickPage() {
-	return <div>BrickPage</div>;
+	return <div>
+		<UnderConstruction />
+	</div>;
 }
 
 export { BrickPage };
