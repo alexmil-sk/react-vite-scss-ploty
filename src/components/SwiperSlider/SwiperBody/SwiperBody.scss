@@ -1,9 +1,19 @@
+@import "../../../styles/index.scss";
 .swiper-body {
-	margin-left: 60%;
 	display: flex;
+	margin-left: 60%;
 	height: 224px;
+	width: 400px;
+	border: 1px solid #fff;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
+	@media (max-width: 1500px) {
+		margin-left: 49%;
+	}
+	@media (max-width: 800px) {
+		display: none;
+	}
 
 	&__title {
 		font-family: "Caudex Bold", serif;
@@ -44,7 +54,7 @@
 		color: #000;
 		margin-bottom: 25px;
 		background-color: orange;
-		border-radius: 10% 90% 19% 81% / 77% 15% 85% 23% ;
+		border-radius: 10% 90% 19% 81% / 77% 15% 85% 23%;
 		padding: 10px 20px;
 		opacity: 0.8;
 	}

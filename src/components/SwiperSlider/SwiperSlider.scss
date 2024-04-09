@@ -1,3 +1,5 @@
+@import "../../styles/index.scss";
+
 .swiper {
 	position: relative;
 	display: flex;
@@ -16,8 +18,7 @@
 	position: inherit;
 	& > img {
 		position: absolute;
-		left: 250px;
-		//width: 60%;
+		@include adaptive-position-left(250, 80, 1000, 414);
 		width: 70%;
 		bottom: 0;
 		height: 100%;
@@ -28,11 +29,12 @@
 
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
-	margin-top: 20px;
+	//margin-top: 20px;
 	transition: all 600ms ease-in-out 0s;
+	@include adaptive-margin-top(20, 0, 1200, 414);
 
 	&:nth-child(1) {
-		margin-top: 200px;
+		@include adaptive-margin-top(200, -10, 1200, 414);
 	}
 }
 
@@ -49,14 +51,14 @@
 		display: block;
 		position: relative;
 		font-family: "Catamaran Semi Bold", sans-serif;
-		font-size: 1rem;
-		margin-top: 10px;
+		@include adaptive-font(16, 12, 1200, 414);
+		@include adaptive-margin-top(10, 0, 1200, 414);
 		margin-bottom: 5px;
 		transition: font-size 400ms ease-in-out 0s;
 		&::before {
 			content: "";
 			display: none;
-			width: 203px;
+			@include adaptive-width(203, 70, 1200, 414);
 			height: 1px;
 			background-color: #fff;
 			margin-bottom: 10px;
@@ -64,46 +66,26 @@
 		}
 	}
 
-	.pagination-price {
-		display: block;
-		font-family: "Catamaran Semi Bold", sans-serif;
-		font-size: 13px;
-		color: #bcbcbc;
-		margin: 5px 0;
-		transition: font-size 400ms ease-in-out 0s;
-
-		span {
-			font-size: 17px;
-			transition: font-size 400ms ease-in-out 0s;
-		}
-	}
-
 	.pagination-image {
-		width: 50px;
+		@include adaptive-width(50, 40, 1200, 414);
 		border-radius: 1%;
 		transition: border-radius 400ms ease-in-out 0s;
 	}
 }
 
 .swiper-pagination-bullet-active {
-	font-size: 34px;
+	@include adaptive-font(34, 30, 1200, 414);
 	background: transparent;
 
 	.pagination-art {
-		font-size: 23px;
+		@include adaptive-font(23, 13, 1200, 414);
+
 		margin-top: 0;
 		&::before {
 			display: block;
 		}
 	}
 
-	.pagination-price {
-		font-size: 17px;
-
-		span {
-			font-size: 23px;
-		}
-	}
 	.pagination-image {
 		border-radius: 50%;
 	}
@@ -114,7 +96,7 @@
 	position: absolute;
 	top: 230px;
 	right: inherit;
-	left: 30px;
-	width: 203px;
+	@include adaptive-position-left(30, 10, 1200, 414);
+	@include adaptive-width(203, 103, 1200, 414);
 	flex-basis: 203px;
 }

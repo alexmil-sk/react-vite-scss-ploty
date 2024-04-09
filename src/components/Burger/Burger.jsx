@@ -48,7 +48,7 @@ function Burger({ setIsOpenBurger }) {
 					initial={"hidden"}
 					animate={"visible"}
 					exit={{ opacity: 0, transition: { delay: 0.05 * 7 } }}
-					transition={{ duration: 1, type: "spring", stiffness: 260, damping: 20, delay: 0.2 * 7 }}
+					transition={{ duration: 1, type: "spring", stiffness: 260, damping: 20, delay: 0.2 * 4 }}
 					variants={motionBurgerItemVariant}
 				>
 					<NavLink to="/buy" className="menu__item_link">

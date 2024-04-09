@@ -17,7 +17,7 @@ function SwiperBody() {
 			</p>
 			<div className="swiper-body__buttons">
 				<Link to="/buy" className="btn buy">
-					Buy Now
+					Kúpiť teraz
 				</Link>
 				<Link to="/contacts" className="btn catalog">
 					{/* <List className="list" /> */}

@@ -2,12 +2,12 @@ import footerCover_lamany_kamen from "../../assets/images/ploty/dosky/lamany-kam
 import footerCover_tehla from "../../assets/images/ploty/dosky/tehla.jpg";
 import footerCover_bridlica from "../../assets/images/ploty/dosky/bridlica.jpg";
 import footerCover_drevo from "../../assets/images/ploty/dosky/drevo.jpg";
-import footerCover_vlna from "../../assets/images/ploty/dosky/vlna.jpg";
+import footerCover_stlp from "../../assets/images/ploty/stlp/stlp.jpg";
 import ploty_lam_kamen from "../../assets/images/ploty/gallery/ploty-lam-kamen.jpg";
 import ploty_bridlica from "../../assets/images/ploty/gallery/ploty-bridlica.jpg";
 import ploty_tehla from "../../assets/images/ploty/gallery/ploty-tehla.jpeg";
 import ploty_zmesany from "../../assets/images/ploty/gallery/ploty-zmiesany.jpg";
-import ploty_vlna from "../../assets/images/ploty/gallery/ploty-vlna.jpg";
+import stlp from "../../assets/images/ploty/stlp/stlp.jpg";
 import { SwiperBody } from "./SwiperBody/SwiperBody.jsx";
 import { SwiperFooter } from "./SwiperFooter/SwiperFooter.jsx";
 import { motion } from "framer-motion";
@@ -82,9 +82,9 @@ const page_thumb = [
 	},
 	{
 		count: "5",
-		name: '"Vlna"',
-		image: ploty_vlna,
-		footerCover: footerCover_vlna,
+		name: '"Stlp"',
+		image: stlp,
+		footerCover: footerCover_stlp,
 		footerTitle: "Footer_Title_5",
 		footerVideo: [
 			"https://www.youtube.com/embed/E1K_ezuo_ts?si=ppNF0M41b8DYPvq_",

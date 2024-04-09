@@ -38,19 +38,15 @@ function ContactsPage() {
 	};
 
 	return (
-		<motion.div
-			className="Contacts"
-			initial={"hidden"}
-			animate={"visible"}
-			variants={motionContactsVariant}
-		>
+		<motion.div className="Contacts" initial={"hidden"} animate={"visible"} variants={motionContactsVariant}>
 			<h2>
 				<span>Kontaktujte</span>&nbsp;Nás
 			</h2>
-			<p>Kontaktujte nás prostredníctvom tohto formulára alebo na telefónnom čísle +421 910 513 298.</p>
+			<p> Objednajte si kalkuláciu prostredníctvom tohto formulára alebo na telefónnom čísle.</p>
 			<div className="content__row">
 				<div className="content__image">
 					<img src={operator} alt="operator" />
+					<p>+421 910 513 298</p>
 				</div>
 				<form onSubmit={onSubmit}>
 					<div className="name-email">

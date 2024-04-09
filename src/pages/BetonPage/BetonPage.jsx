@@ -14,37 +14,37 @@ import vlna from "../../assets/images/ploty/dosky/vlna.jpg";
 const plotItems = [
 	{
 		title: "Bridlica",
-		desc: "Bridlica, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Bridlica, je usadená hornina, ktorá vznikla pri spevnením ílovitých sedimentov.",
 		image: bridlica,
 	},
 	{
 		title: "Drevo",
-		desc: "Drevo, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Imitácia dreva je určený dizajn  pre náročných klientov.",
 		image: drevo,
 	},
 	{
 		title: "Kameň",
-		desc: "Kameň, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Betónový plot so vzhľadom kamenného obkladu",
 		image: kamen,
 	},
 	{
 		title: "Lam. Kameň",
-		desc: "Lam. Kameň, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Betónový panel so vzorom štiepaného kameňa.",
 		image: lamany_kamen,
 	},
 	{
 		title: "Skala",
-		desc: "Skala, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Betónová doska so vzorom štiepaného kameňa vyzerá ako plot zo kusov skaly.",
 		image: skala,
 	},
 	{
 		title: "Tehla",
-		desc: "Tehla, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Betónová doska s imitáciou tehly.",
 		image: tehla,
 	},
 	{
 		title: "Vlna",
-		desc: "Vlna, lorem, ipsum dolor sit amet consectetur adipisicing elit. A, neque!",
+		desc: "Betónová doska so vzorom Vlna",
 		image: vlna,
 	},
 ];

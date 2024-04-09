@@ -79,9 +79,6 @@ const motionUnderConstructionVariant = {
 			duration: 1,
 		}
 	},
-	exit: {
-		
-	}
 };
 
 

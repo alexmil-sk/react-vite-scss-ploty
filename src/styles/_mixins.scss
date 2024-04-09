@@ -41,3 +41,49 @@
 	}
 }
 
+@mixin adaptive-margin-top($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media (min-width: 767px) {
+		margin-top: calc(#{$mobileMarginSize + px} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+	@media (max-width: 767px) {
+		margin-top: calc(#{$mobileMarginSize + px} + #{$addMobileMarginSize} * (100vh - #{$minWidth + px}) / #{$maxWidth});
+	}
+}
+
+@mixin adaptive-margin-left($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media (min-width: 800px) {
+		margin-left: calc(#{$mobileMarginSize + px} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+}
+
+@mixin adaptive-position-left($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media (min-width: 767px) {
+		left: calc(#{$mobileMarginSize + px} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+
+	@media (max-width: 767px) {
+		left: calc(#{$mobileMarginSize + px} + #{$addMobileMarginSize} * (100vh - #{$minWidth + px}) / #{$maxWidth});
+	}
+}
+
+@mixin adaptive-width($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media (min-width: 767px) {
+		width: calc(#{$mobileMarginSize + px} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+
+	@media (max-width: 767px) {
+		width: calc(#{$mobileMarginSize + px} + #{$addMobileMarginSize} * (100vh - #{$minWidth + px}) / #{$maxWidth});
+	}
+}

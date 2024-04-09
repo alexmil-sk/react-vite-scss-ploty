@@ -10,6 +10,7 @@ function UnderConstruction() {
 				className={styles.construction}
 				initial={"hidden"}
 				animate={"visible"}
+				exit={"exit"}
 				variants={motionUnderConstructionVariant}
 			>
 				<div className={styles.construction__row}>
