@@ -34,11 +34,15 @@
 				max-width: 100%;
 			}
 			p {
+				display: flex;
+				justify-content: center;
 				font-family: "Catamaran Extra Bold", sans-serif;
 				@include adaptive-font(40, 20, 1200, 320);
-				color: orange;
 				color: lawngreen;
 				text-shadow: 1px 1px 2px #fff, 0 0 1em lightblue, 3px 3px 0.2em blue;
+				& svg {
+					margin-right: 10px;
+				}
 			}
 		}
 		form {
@@ -146,7 +150,7 @@
 					margin-right: 2rem;
 					color: orange;
 					&::before {
-						content: "Inštalácia:";
+						content: "Montáž:";
 						position: absolute;
 						left: -1px;
 						top: 2px;
@@ -197,6 +201,7 @@
 				color: orangered;
 				line-height: 2;
 				padding: 5px 10px;
+				background-color: #fff;
 				cursor: pointer;
 				transition: all 400ms ease-in;
 				&:hover {

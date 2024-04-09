@@ -4,6 +4,7 @@ import operator from "../../assets/images/form_to_mail/operator.png";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { motionContactsVariant } from "../../framer-motion/motionVariants";
+import { FaWhatsappSquare } from "react-icons/fa";
 
 function ContactsPage() {
 	const navigate = useNavigate();
@@ -46,7 +47,10 @@ function ContactsPage() {
 			<div className="content__row">
 				<div className="content__image">
 					<img src={operator} alt="operator" />
-					<p>+421 910 513 298</p>
+					<p>
+						<FaWhatsappSquare />
+						+421 910 513 298
+					</p>
 				</div>
 				<form onSubmit={onSubmit}>
 					<div className="name-email">
@@ -65,14 +69,14 @@ function ContactsPage() {
 					</div>
 					<div className="address">
 						<input type="text" name="address" id="address" placeholder=" " />
-						<label htmlFor="address">Zadajte adresu inštalácie</label>
+						<label htmlFor="address">Zadajte adresu</label>
 					</div>
 					<div className="textarea">
 						<textarea name="message" id="message" cols="30" rows="10" placeholder=" "></textarea>
-						<label htmlFor="message">Zadajte podmienky inštalácie</label>
+						<label htmlFor="message">Zadajte montážne podmienky</label>
 					</div>
 					<div className="installation">
-						<span>Inštalácia:</span>
+						<span>Montáž:</span>
 						<input type="radio" name="installation" id="yes" value="install" />
 						<label htmlFor="yes">Áno</label>
 						<input type="radio" name="installation" id="no" defaultChecked readOnly value="no_install" />
