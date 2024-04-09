@@ -60,8 +60,18 @@
 			}
 		}
 		&__btn {
+			display: flex;
+			justify-content: space-between;
 			width: 100%;
 			text-align: right;
+			p {
+				text-align: left;
+				line-height: 1.2;
+				& span {
+					font-weight: bold;
+					color: yellow;
+				}
+			}
 			button {
 				border-radius: 0.5rem;
 				box-shadow: 0.1rem 0.3rem 1rem 0 orangered;

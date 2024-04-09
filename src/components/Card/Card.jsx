@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
 
-function Card({ item}) {
+function Card({ item }) {
 	return (
 		<div className={styles.item__container}>
 			<div className={styles.item}>
@@ -13,6 +13,14 @@ function Card({ item}) {
 					<p>{item.desc}</p>
 				</div>
 				<div className={styles.item__btn}>
+					<div>
+						<p>
+							Rozmer:&nbsp;<span>{item.rozmer}</span>
+						</p>
+						<p>
+							Cena:&nbsp;<span>{item.cena}</span>
+						</p>
+					</div>
 					<Link to="/contacts">
 						<button>Objednať</button>
 					</Link>

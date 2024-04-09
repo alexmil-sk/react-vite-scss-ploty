@@ -50,7 +50,7 @@
 	.pagination-art {
 		display: block;
 		position: relative;
-		font-family: "Catamaran Semi Bold", sans-serif;
+		font-family: "Catamaran Medium", sans-serif;
 		@include adaptive-font(16, 12, 1200, 414);
 		@include adaptive-margin-top(10, 0, 1200, 414);
 		margin-bottom: 5px;
@@ -78,7 +78,7 @@
 	background: transparent;
 
 	.pagination-art {
-		@include adaptive-font(23, 13, 1200, 414);
+		@include adaptive-font(20, 13, 1200, 414);
 
 		margin-top: 0;
 		&::before {
