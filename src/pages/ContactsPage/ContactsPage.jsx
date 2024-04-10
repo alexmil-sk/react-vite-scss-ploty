@@ -31,7 +31,6 @@ function ContactsPage() {
 			}).then((res) => res.json());
 
 			if (res.success) {
-				//console.log("Success", res);
 				navigate("/");
 				toast.success("Vaša žiadosť bola úspešne odoslaná");
 			}
