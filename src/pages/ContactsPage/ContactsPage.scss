@@ -39,7 +39,10 @@
 				font-family: "Catamaran Extra Bold", sans-serif;
 				@include adaptive-font(40, 20, 1200, 320);
 				color: lawngreen;
-				text-shadow: 1px 1px 2px #fff, 0 0 1em lightblue, 3px 3px 0.2em blue;
+				text-shadow:
+					1px 1px 2px #fff,
+					0 0 1em lightblue,
+					3px 3px 0.2em blue;
 				& svg {
 					margin-right: 10px;
 				}
@@ -72,6 +75,13 @@
 					border-radius: 0.5rem;
 					padding: 0.5rem;
 					font-size: 1.1rem;
+					background-color: #fff;
+					color: #000;
+
+					&:user-invalid {
+						//box-shadow: 0 0.5rem 0.5rem orangered;
+						background-color: rgba(253, 226, 232, 0.9);
+					}
 				}
 				label {
 					position: absolute;
@@ -79,7 +89,7 @@
 					top: 13px;
 					left: 0;
 					color: orange;
-					background-color: #fff;
+					background-color: transparent;
 					cursor: text;
 				}
 				input:focus + label,
@@ -93,7 +103,7 @@
 				}
 				input:focus {
 					outline: 2px solid orange;
-					//outline-color: orange;
+					font-size: 1.1rem;
 				}
 				label,
 				input {
@@ -109,6 +119,8 @@
 					border-radius: 0.5rem;
 					padding: 0.5rem;
 					font-size: 1.1rem;
+					background-color: #fff;
+					color: #000;
 				}
 				label {
 					position: absolute;

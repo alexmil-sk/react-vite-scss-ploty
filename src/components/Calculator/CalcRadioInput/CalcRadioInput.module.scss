@@ -1,0 +1,29 @@
+/* Radio */
+
+.radio_hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	/* clip: rect(0, 0, 0, 0);
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%); */
+}
+
+.radio_label {
+	display: inline-block;
+	padding: 0.5em 1em;
+	border-radius: 6px;
+	border: 1px solid #e9e9e9;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.radio_hidden:checked + .radio_label {
+    border-color: transparent;
+	background-color: #21bb57;
+	color: #fff;
+}

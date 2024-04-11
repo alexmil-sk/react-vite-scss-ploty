@@ -1,0 +1,146 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--container-width-l: 1270px;
+	--container-padding: 15px;
+	--main-font: 'Roboto Mono', monospace;
+	/* --main-font: 'Inter', sans-serif; */
+	--secondary: rgba(15, 31, 28, 0.5);
+}
+
+body {
+	font-family: var(--main-font);
+	background-color: #fff;
+	color: #0f1f1c;
+
+	padding-top: 50px;
+}
+
+.none {
+	display: none !important;
+}
+
+.container {
+	padding: 0 var(--container-padding);
+	max-width: var(--container-width-l);
+	margin: 0 auto;
+}
+
+.container_right {
+	padding-left: calc((100% - var(--container-width-l)) / 2 + var(--container-padding));
+}
+
+.visually_hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+}
+
+.title {
+	margin-bottom: 40px;
+	font-size: 42px;
+	font-weight: 700;
+}
+
+/* Grid */
+
+.row {
+	display: flex;
+	column-gap: 60px;
+}
+
+.col_right {
+	min-width: 400px;
+	flex-basis: 30%;
+}
+//Params
+
+.params_wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+}
+
+/* Summary */
+.summary {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 50px;
+	row-gap: 30px;
+}
+
+/* Summary Item*/
+.summary_item__title {
+    margin-bottom: 10px;
+	font-size: 14px;
+	color: #888888;
+}
+
+.summary_item__value {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.summary_item__value_bigger {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.summary-item__value_percents {
+	/* color: rgb(6, 132, 228); */
+	color: #21bb57;
+}
+
+/* Programs */
+
+.programms_wraper {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 10px;
+	row-gap: 10px;
+	margin-bottom: 30px;
+}
+
+
+/* Sliders */
+
+#slider-cost,
+#slider-cost .noUi_handle {
+    box-shadow: none;
+}
+
+/* Hide markers on slider handles */
+#slider-cost .noUi_handle::before,
+#slider-cost .noUi_handle::after {
+    display: none;
+}
+
+#slider-cost .noUi_connect {
+    background: #21bb57;
+}
+
+#slider-cost .noUi_handle {
+    height: 20px;
+    width: 20px;
+    top: -7px;
+    right: -10px; /* half the width */
+    border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 1px 4px rgb(36 38 41 / 24%);
+	cursor: pointer;
+
+	transition: transform 0.1s ease-in;
+}
+
+#slider-cost .noUi_handle:hover{
+	transform: scale(1.3);
+}
